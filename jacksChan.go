@@ -89,33 +89,3 @@ func (j *JakesModel) Generate(m float64) complex128 {
 	z := (z1 + z2) * complex(2.5/math.Sqrt(j.N), 0)
 	return z
 }
-
-// func jacksm(samplingRate float64, m float64, fd float64, beta vlib.NewVectorF, phi vlib.NewVectorF) (complex128, vlib.NewVectorF, vlib.NewVectorF) {
-
-// 	// samplingRate := 2000.0
-// 	// m := 6.0
-
-// 	// fmt.Println(sampling_period)
-// 	// phi(n) ~ U[-pi,pi) is a RV
-// 	//for m = 0:no_of_samples-1
-// 	// for i:=1
-// 	var z_term_sum_real float64
-// 	var z_term_sum_imag float64
-// 	for i := 0; i < beta.Size(); i++ {
-// 		z_term_sum_real += 2 * math.Cos(beta[i]) * math.Cos((2*pi*f[i]*m*sampling_period)+phi[i])
-// 		z_term_sum_imag += 2 * math.Sin(beta[i]) * math.Cos((2*pi*f[i]*m*sampling_period)+phi[i])
-// 	}
-
-// 	z_term_2_real := math.Sqrt(2) * math.Cos((2*pi*fd*m*sampling_period)+phi[beta.Size()])
-// 	z_term_2_imag := math.Sqrt(2) * math.Sin((2*pi*fd*m*sampling_period)+phi[beta.Size()])
-
-// 	z_real := (2 / math.Sqrt(N)) * (z_term_sum_real + z_term_2_real)
-// 	z_imag := (2 / math.Sqrt(N)) * (z_term_sum_imag + z_term_2_imag)
-
-// 	z := complex(z_real, z_imag)
-// 	return z, beta, phi
-// 	// fmt.Println(z)
-// 	//end
-// 	// rms_value = sqrt(((norm(abs(z)))^2)/no_of_samples);
-// 	// z = z/rms_value ;       % Normalisation is being done
-// }
